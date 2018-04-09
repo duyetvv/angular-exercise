@@ -1,3 +1,14 @@
-<p>
-  tictactoe works!
-</p>
+<div class="tictactoe">
+  <h1 class="tictactoe__header">Tic tac toe Game</h1>
+  <div class="tictactoe__container">
+    <div class="tictactoe__grid">
+      <div
+        *ngFor="let square of squares; let i=index"
+        class="tictactoe__square"
+        (click)="squareClick(i)">
+        <span class="tictactoe__square-value">{{square}}</span>
+      </div>
+    </div>
+  </div>
+  <h2>{{message}}</h2>
+</div>
