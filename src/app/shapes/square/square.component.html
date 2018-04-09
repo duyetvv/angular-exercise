@@ -1,0 +1,17 @@
+<div class="shape">
+    <h2>Input the edge of Square!</h2>
+    <div class="shape__form">
+      <div class="shape__form-group">
+        <label for="shape_bottom_adge">Width: </label>
+        <input id="shape_bottom_adge" type="text" ngModel="triangle.bottomEdge">
+      </div>
+      <div class="shape__form-group">
+        <label for="shape_height">Height: </label>
+        <input id="shape_height" type="text" ngModel="triangle.bottomEdge">
+      </div>
+      <div class="shape__form-group">
+        <div class="shape__resultt">Your Acreage: {{acreage}}</div>
+      </div>
+      <button class="shape__form-submit" (click)="onSubmit(triangle)">OK</button>
+    </div>
+  </div>

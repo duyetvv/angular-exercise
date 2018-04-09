@@ -1,0 +1,23 @@
+.shape {
+  &__form-group {
+    margin: 1rem;
+
+    label {
+      display: inline-block;
+      width: 8rem;
+      text-align: left;
+    }
+
+    input {
+      display: inline-block;
+      padding: .4rem;
+      width: 14rem;
+    }
+  }
+
+  &__form-submit {
+    padding: .6rem 1rem;
+    border: 0;
+    background: teal;
+  }
+}

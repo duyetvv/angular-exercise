@@ -6,19 +6,28 @@ import { AppComponent } from './app.component';
 import { TictactoeComponent } from './tictactoe/tictactoe.component';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { AcreageComponent } from './acreage/acreage.component';
+
+
+import { CalculationService } from './services/calculation.service';
+import { TriangleComponent } from './shapes/triangle/triangle.component';
+import { SquareComponent } from './shapes/square/square.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TictactoeComponent,
-    HomeComponent
+    HomeComponent,
+    AcreageComponent,
+    TriangleComponent,
+    SquareComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CalculationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

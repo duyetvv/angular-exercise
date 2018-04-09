@@ -5,7 +5,8 @@ import * as ROUTE from './router-path';
 
 const routes: Routes = [
   ROUTE.HOME,
-  ROUTE.TICTACTOE
+  ROUTE.TICTACTOE,
+  ROUTE.ACREAGE
 ]
 
 @NgModule({

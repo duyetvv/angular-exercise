@@ -1,0 +1,21 @@
+.acreage {
+  text-align: center;
+
+  &__shapes {
+    display: inline-block;
+    max-width: 600px;
+  }
+
+  &__shape-link {
+    display: inline-block;
+    margin-right: .4rem;
+    padding: .8rem 1rem;
+    background: lightcoral;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background: coral;
+    }
+  }
+}
