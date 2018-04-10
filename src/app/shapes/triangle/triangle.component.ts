@@ -18,7 +18,6 @@ export class TriangleComponent implements OnInit {
 
   onSubmit(_triangle) {
     const triangle:Triangle = new Triangle(this.bottomEdge, this.height);
-
     this.acreage = triangle.getAcreage();
   }
 }

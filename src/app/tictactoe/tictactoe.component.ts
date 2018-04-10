@@ -36,6 +36,11 @@ export class TictactoeComponent implements OnInit {
     this.autoFill();
   }
 
+  resetGame() {
+    this.squares = [ '', '', '', '', '', '', '', '', '' ];
+    this.message = '';
+  }
+
   private autoFill(): void {
     const index:number = this.getIndexFill();
     this.squares[index] = 'o';

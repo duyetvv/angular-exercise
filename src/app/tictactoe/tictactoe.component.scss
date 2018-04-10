@@ -35,4 +35,11 @@
       font-family: 'Source Code Pro Black';
     }
   }
+
+  &__reset {
+    background: olivedrab;
+    padding: .6rem 1rem;
+    border: 0;
+    cursor: pointer;
+  }
 }

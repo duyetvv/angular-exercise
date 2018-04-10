@@ -17,7 +17,6 @@ export class SquareComponent implements OnInit {
   }
 
   onSubmit() {
-    debugger;
     const square = new Square(this.width, this.height);
     this.acreage = square.getAcreage();
   }
