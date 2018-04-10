@@ -3,15 +3,15 @@
     <div class="shape__form">
       <div class="shape__form-group">
         <label for="shape_bottom_adge">Width: </label>
-        <input id="shape_bottom_adge" type="text" ngModel="triangle.bottomEdge">
+        <input id="shape_bottom_adge" type="number" [(ngModel)]="width">
       </div>
       <div class="shape__form-group">
         <label for="shape_height">Height: </label>
-        <input id="shape_height" type="text" ngModel="triangle.bottomEdge">
+        <input id="shape_height" type="number" [(ngModel)]="height">
       </div>
       <div class="shape__form-group">
         <div class="shape__resultt">Your Acreage: {{acreage}}</div>
       </div>
-      <button class="shape__form-submit" (click)="onSubmit(triangle)">OK</button>
+      <button class="shape__form-submit" (click)="onSubmit()">OK</button>
     </div>
   </div>

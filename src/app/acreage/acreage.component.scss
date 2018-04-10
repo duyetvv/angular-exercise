@@ -14,8 +14,8 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    &:hover {
-      background: coral;
+    &:hover, &.active {
+      background: tomato;
     }
   }
 }

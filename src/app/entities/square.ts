@@ -4,9 +4,9 @@ export class Square extends Shape {
   private width:number;
   private height:number;
 
-  constructor(_width:number, _height:number) {
+  constructor(_width:number = 0, _height:number = 0) {
     super();
-    this.width - _width;
+    this.width = _width;
     this.height = _height;
   }
 

@@ -7,6 +7,7 @@ import { TictactoeComponent } from './tictactoe/tictactoe.component';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AcreageComponent } from './acreage/acreage.component';
+import { FormsModule } from '@angular/forms';
 
 
 import { CalculationService } from './services/calculation.service';
@@ -24,6 +25,7 @@ import { SquareComponent } from './shapes/square/square.component';
     SquareComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],

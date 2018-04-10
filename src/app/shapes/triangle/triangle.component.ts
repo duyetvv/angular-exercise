@@ -7,15 +7,18 @@ import { Triangle } from '../../entities/triangle';
   styleUrls: ['./triangle.component.scss']
 })
 export class TriangleComponent implements OnInit {
-  triangle:Triangle = new Triangle(0, 0);
-  acreage:number;
+  bottomEdge:number = 0;
+  height:number = 0;
+  acreage:number = 0;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onSubmit(_triangle) {
-    debugger;
-    this.acreage = this.triangle.getAcreage();
+    const triangle:Triangle = new Triangle(this.bottomEdge, this.height);
+
+    this.acreage = triangle.getAcreage();
   }
 }

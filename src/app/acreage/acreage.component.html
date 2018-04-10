@@ -1,7 +1,7 @@
 <div class="acreage">
   <h1>Welcome to acreage calculation!</h1>
   <div class="acreage__shapes">
-    <a class="acreage__shape-link" *ngFor="let sh of shapes" [routerLink]="sh">{{sh}}</a>
+    <a class="acreage__shape-link" *ngFor="let sh of shapes" [routerLink]="sh" routerLinkActive="active">{{sh}}</a>
   </div>
   <router-outlet></router-outlet>
 </div>
