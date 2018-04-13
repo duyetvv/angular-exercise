@@ -7,19 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class TodosComponent implements OnInit {
-  oriTodos:any = [
+  todos:any = [
     { name: 'duyet', status: true },
     { name: 'duyet1', status: false }
   ];
 
-  todos:any = [];
   name:string = '';
   filters:string[] = ['false', 'true'];
 
   constructor() { }
 
   ngOnInit() {
-    this.filterTodo();
   }
 
   addTodo() {
@@ -27,23 +25,20 @@ export class TodosComponent implements OnInit {
       return;
     }
 
-    this.oriTodos.push({
+    this.todos.push({
       name: this.name,
       status: true
     });
 
-    this.filterTodo();
     this.name = '';
   }
 
   toggleStatus(index) {
     this.todos[index].status = !this.todos[index].status;
-    this.filterTodo();
   }
 
   deleteTodo(index) {
-    this.oriTodos.splice(index, 1);
-    this.todos = [].concat(this.oriTodos);
+    this.todos.splice(index, 1);
   }
 
   handleFilter(evt) {
@@ -52,17 +47,15 @@ export class TodosComponent implements OnInit {
 
     if (evt.target.checked) {
       this.filters = Array.from(new Set(this.filters.concat(name)));
-      this.filterTodo();
       return;
     }
     this.filters = this.filters.filter(ele => ele !== name)
-    this.filterTodo();
   }
 
-  filterTodo() {
-    this.todos = !this.filters.length ? []
+  filterTodos() {
+    return !this.filters.length ? []
     : [].concat(
-      this.oriTodos.filter(todo => this.filters.indexOf(todo.status.toString()) !== -1)
+      this.todos.filter(todo => this.filters.indexOf(todo.status.toString()) !== -1)
     );
   }
 }
