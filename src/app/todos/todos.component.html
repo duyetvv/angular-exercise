@@ -5,17 +5,17 @@
   <label for="active"> Active
     <input
       type="checkbox"
-      name="false"
+      name="true"
       id="active"
-      [checked]="filters.indexOf('false') > -1"
+      [checked]="filters.indexOf('true') > -1"
       (change)="handleFilter($event)">
   </label>
   <label for="inactive"> InActive
     <input
       type="checkbox"
-      name="true"
+      name="false"
       id="inactive"
-      [checked]="(filters.indexOf('true') > -1)"
+      [checked]="(filters.indexOf('false') > -1)"
       (change)="handleFilter($event)">
   </label>
 </form>
@@ -23,7 +23,6 @@
 <ul id="myUL">
   <li *ngFor="let item of todos; index as i"
     [class.inactive]="!item.status"
-    [class.hidden]="(filters.indexOf(item.status.toString()) > -1)"
     (click)="toggleStatus(i)">
     {{item.name}}
     <button (click)="deleteTodo(i)">x</button>
