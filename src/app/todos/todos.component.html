@@ -21,8 +21,9 @@
 </form>
 
 <ul id="myUL">
-  <li *ngFor="let item of filterTodos(); index as i"
+  <li *ngFor="let item of todos; index as i"
     [class.inactive]="!item.status"
+    [class.hidden]="(filters.indexOf(item.status.toString()) === -1)"
     (click)="toggleStatus(i)">
     {{item.name}}
     <button (click)="deleteTodo(i)">x</button>
